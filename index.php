@@ -40,23 +40,9 @@
 
 
 <h3>Sharing Links</h3>
-<div
-  class="fb-like"
-  data-share="true"
-  data-width="450"
-  data-show-faces="true">
-</div>
 
-<div id="shareBtn" class="btn btn-success clearfix">Share Dialog</div>
 
-<script type="text/javascript">
-    $(".clearfix").click(function() {
-    FB.ui({
-    method: 'share',
-    href: 'https://jsfiddle.net/',
-    }, function(response){});
-});
-</script>
+
 
 
 <span>Go Live Dialog</span></br>
