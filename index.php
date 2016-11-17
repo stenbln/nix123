@@ -113,6 +113,7 @@
 <ul id="pagesList" class="btn-group btn-group-vertical clearfix"></ul>
   
 <span id="pageName" class="label label-success">No page selected</span>
+<br>
 <span id="pageToken" class="label label-success">No page selected</span>
 <br><br>
 <div id="publishBtn" class="btn btn-success"><b>Publish post on the page!</b></div>
@@ -145,7 +146,7 @@ document.getElementById('pageBtn').onclick = function() {
       li.className = 'btn btn-mini';
       li.onclick = function() {
         document.getElementById('pageName').innerHTML = "Page Name: " + this.innerHTML;
-        document.getElementById('pageToken').innerHTML = "Page Token: " + this.dataset.token;
+        document.getElementById('pageToken').innerHTML = this.dataset.token;
         document.getElementById('pageLink').setAttribute('href', this.dataset.link);
       }
       list.appendChild(li);
