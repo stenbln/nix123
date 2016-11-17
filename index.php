@@ -117,7 +117,7 @@
  //Function for showing fan Pages that person admins
 document.getElementById('pageBtn').onclick = function() {
   FB.api('/me/accounts?fields=name,access_token,link', function(response) {
-    Log.info('API response', response);
+    console.log('API response', response);
     var list = document.getElementById('pagesList');
     for (var i=0; i < response.data.length; i++) {
       var li = document.createElement('li');
