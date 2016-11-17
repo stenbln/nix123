@@ -160,10 +160,18 @@ document.getElementById('pageBtn').onclick = function() {
 // publish on facebook fan page trough facebook graph API 
 document.getElementById('publishBtn').onclick = function() {
   var pageToken = document.getElementById('pageToken').innerHTML;
-  FB.api('/me/feed', 'POST', {message: 'Hello, world!!', access_token: pageToken}, function(response) {
-    console.log('API Response after publishing to facebook fan page', response);
-    document.getElementById('publishBtn').innerHTML = 'API response is ' + response.id;
+  //FB.api('/me/feed', 'POST', {message: 'Hello, world!!', access_token: pageToken}, function(response) {
+    //console.log('API Response after publishing to facebook fan page', response);
+    //document.getElementById('publishBtn').innerHTML = 'API response is ' + response.id;
+  //});
+  
+  //API for creating live videos
+  FB.api('/me/live_videos', 'POST', {access_token: pageToken}, function (response) {
+    if (response && !response.error) {
+        console.log("Response after the video is created", response);
+    }
   });
+  
   return false;
 }  
 </script>
