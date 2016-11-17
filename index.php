@@ -108,9 +108,15 @@
 
 <div id="status">
 </div>
- <div id="pageBtn" class="btn btn-success clearfix">Click me to show the list of Pages you admin.</div>
-  <ul id="pagesList" class="btn-group btn-group-vertical clearfix"></ul>
- <button type="button" onclick="logout()">Logout!</button>
+<div id="pageBtn" class="btn btn-success clearfix">Click me to show the list of Pages you admin.</div>
+<ul id="pagesList" class="btn-group btn-group-vertical clearfix"></ul>
+  
+<span id="pageName" class="label label-success">No page selected</span>
+<span id="pageToken" class="label label-success">No page selected</span>
+<p><a id="pageLink" href="#">Chosen Page</a> </p>
+
+  
+<button type="button" onclick="logout()">Logout!</button>
 
   
     
