@@ -114,6 +114,7 @@
   
     
 <script>
+ //STIL TO DO: CHECK PAGINATION
  //Function for showing fan Pages that person admins
 document.getElementById('pageBtn').onclick = function() {
   FB.api('/me/accounts?fields=name,access_token,link', function(response) {
