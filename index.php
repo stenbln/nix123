@@ -94,7 +94,30 @@
       statusChangeCallback(response);
     });
   }
-
+</script>
+  
+<script>
+ //Function for showing fan Pages that person admins
+document.getElementById('pageBtn').onclick = function() {
+  FB.api('/me/accounts?fields=name,access_token,link', function(response) {
+    Log.info('API response', response);
+    var list = document.getElementById('pagesList');
+    for (var i=0; i < response.data.length; i++) {
+      var li = document.createElement('li');
+      li.innerHTML = response.data[i].name;
+      li.dataset.token = response.data[i].access_token;
+      li.dataset.link = response.data[i].link;
+      li.className = 'btn btn-mini';
+      li.onclick = function() {
+        document.getElementById('pageName').innerHTML = this.innerHTML;
+        document.getElementById('pageToken').innerHTML = this.dataset.token;
+        document.getElementById('pageLink').setAttribute('href', this.dataset.link);
+      }
+      list.appendChild(li);
+    }
+  });
+  return false;
+}  
 </script>
 
 <!--
@@ -108,7 +131,7 @@
 
 <div id="status">
 </div>
-  
+ <div id="pageBtn" class="btn btn-success clearfix">Click me to show the list of Pages you admin.</div>
  <button type="button" onclick="logout()">Logout!</button>
 
 </body>
