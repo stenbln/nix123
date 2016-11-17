@@ -158,7 +158,7 @@ document.getElementById('pageBtn').onclick = function() {
 document.getElementById('publishBtn').onclick = function() {
   var pageToken = document.getElementById('pageToken').innerHTML;
   FB.api('/me/feed', 'post', {message: 'Hello, world!', access_token: pageToken}, function(response) {
-    Log.info('API response', response);
+    console.log('API Response after publishing to facebook fan page', response);
     document.getElementById('publishBtn').innerHTML = 'API response is ' + response.id;
   });
   return false;
