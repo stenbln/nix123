@@ -159,7 +159,7 @@ document.getElementById('pageBtn').onclick = function() {
 // publish on facebook fan page trough facebook graph API 
 document.getElementById('publishBtn').onclick = function() {
   var pageToken = document.getElementById('pageToken').innerHTML;
-  FB.api('/'+ pageToken +'/feed', 'post', {message: 'Fixed!'}, function(response) {
+  FB.api('/me/feed', 'POST', {message: 'Hello, world!', access_token: pageToken}, function(response) {
     console.log('API Response after publishing to facebook fan page', response);
     document.getElementById('publishBtn').innerHTML = 'API response is ' + response.id;
   });
