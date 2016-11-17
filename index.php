@@ -113,9 +113,10 @@
   
 <span id="pageName" class="label label-success">No page selected</span>
 <span id="pageToken" class="label label-success">No page selected</span>
-<p><a id="pageLink" href="#">Chosen Page</a> </p>
+<div id="publishBtn" class="btn btn-success">Publish post on the page!</div>
+<p><a id="pageLink" href="#">Visit the chosen Page</a> </p>
 
-  
+
 <button type="button" onclick="logout()">Logout!</button>
 
   
@@ -151,5 +152,18 @@ document.getElementById('pageBtn').onclick = function() {
   return false;
 }  
 </script>
+
+<script>
+// publish on facebook fan page trough facebook graph API 
+document.getElementById('publishBtn').onclick = function() {
+  var pageToken = document.getElementById('pageToken').innerHTML;
+  FB.api('/me/feed', 'post', {message: 'Hello, world!', access_token: pageToken}, function(response) {
+    Log.info('API response', response);
+    document.getElementById('publishBtn').innerHTML = 'API response is ' + response.id;
+  });
+  return false;
+}  
+</script>
+  
 </body>
 </html>
