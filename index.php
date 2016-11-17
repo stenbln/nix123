@@ -95,7 +95,24 @@
     });
   }
 </script>
+
+
+<!--
+  Below we include the Login Button social plugin. This button uses
+  the JavaScript SDK to present a graphical Login button that triggers
+  the FB.login() function when clicked.
+-->
+
+<fb:login-button scope="public_profile,email,manage_pages" onlogin="checkLoginState();">
+</fb:login-button>
+
+<div id="status">
+</div>
+ <div id="pageBtn" class="btn btn-success clearfix">Click me to show the list of Pages you admin.</div>
+ <button type="button" onclick="logout()">Logout!</button>
+
   
+    
 <script>
  //Function for showing fan Pages that person admins
 document.getElementById('pageBtn').onclick = function() {
@@ -119,20 +136,5 @@ document.getElementById('pageBtn').onclick = function() {
   return false;
 }  
 </script>
-
-<!--
-  Below we include the Login Button social plugin. This button uses
-  the JavaScript SDK to present a graphical Login button that triggers
-  the FB.login() function when clicked.
--->
-
-<fb:login-button scope="public_profile,email,manage_pages" onlogin="checkLoginState();">
-</fb:login-button>
-
-<div id="status">
-</div>
- <div id="pageBtn" class="btn btn-success clearfix">Click me to show the list of Pages you admin.</div>
- <button type="button" onclick="logout()">Logout!</button>
-
 </body>
 </html>
