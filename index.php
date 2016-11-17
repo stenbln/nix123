@@ -134,8 +134,8 @@ document.getElementById('pageBtn').onclick = function() {
       li.dataset.link = response.data[i].link;
       li.className = 'btn btn-mini';
       li.onclick = function() {
-        document.getElementById('pageName').innerHTML = this.innerHTML;
-        document.getElementById('pageToken').innerHTML = this.dataset.token;
+        document.getElementById('pageName').innerHTML = "Page Name" + this.innerHTML;
+        document.getElementById('pageToken').innerHTML = "Page Token" + this.dataset.token;
         document.getElementById('pageLink').setAttribute('href', this.dataset.link);
       }
       list.appendChild(li);
