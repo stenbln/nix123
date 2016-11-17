@@ -127,6 +127,13 @@ document.getElementById('pageBtn').onclick = function() {
   FB.api('/me/accounts?fields=name,access_token,link', function(response) {
     console.log('API response', response);
     var list = document.getElementById('pagesList');
+    
+    //Delete all child elements of the ul element (otherwise elements will be appended again)
+    var listNode = list;
+    while (listNode.firstChild) {
+      listNode.removeChild(listNode.firstChild);
+    }
+    
     for (var i=0; i < response.data.length; i++) {
       var li = document.createElement('li');
       li.innerHTML = response.data[i].name;
