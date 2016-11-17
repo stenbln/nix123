@@ -108,12 +108,14 @@
 
 <div id="status">
 </div>
-<div id="pageBtn" class="btn btn-success clearfix">Click me to show the list of Pages you admin.</div>
+<br>
+<div id="pageBtn" class="btn btn-success clearfix"><b>Click me to show the list of Pages you admin.</b></div>
 <ul id="pagesList" class="btn-group btn-group-vertical clearfix"></ul>
   
 <span id="pageName" class="label label-success">No page selected</span>
 <span id="pageToken" class="label label-success">No page selected</span>
-<div id="publishBtn" class="btn btn-success">Publish post on the page!</div>
+<br>
+<div id="publishBtn" class="btn btn-success"><b>Publish post on the page!</b></div>
 <p><a id="pageLink" href="#">Visit the chosen Page</a> </p>
 
 
