@@ -91,6 +91,7 @@
       // user is now logged out
       console.log("User is logged out now, below is a response object when user logs out");
       console.log(response);
+      statusChangeCallback(response);
     });
   }
 
