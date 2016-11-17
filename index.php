@@ -40,7 +40,7 @@
 
   window.fbAsyncInit = function() {
   FB.init({
-    appId      : '1229629153761679', // this is the STANOVNIK Test app
+    appId      : '579475388777062',
     cookie     : true,  // enable cookies to allow the server to access 
                         // the session
     xfbml      : true,  // parse social plugins on this page
@@ -159,7 +159,7 @@ document.getElementById('pageBtn').onclick = function() {
 // publish on facebook fan page trough facebook graph API 
 document.getElementById('publishBtn').onclick = function() {
   var pageToken = document.getElementById('pageToken').innerHTML;
-  FB.api('/me/feed', 'POST', {message: 'Hello, world!'}, function(response) {
+  FB.api('/me/feed', 'POST', {message: 'Hello, world!', access_token: pageToken}, function(response) {
     console.log('API Response after publishing to facebook fan page', response);
     document.getElementById('publishBtn').innerHTML = 'API response is ' + response.id;
   });
