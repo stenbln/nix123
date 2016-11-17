@@ -114,7 +114,7 @@
   
 <span id="pageName" class="label label-success">No page selected</span>
 <span id="pageToken" class="label label-success">No page selected</span>
-<br>
+<br><br>
 <div id="publishBtn" class="btn btn-success"><b>Publish post on the page!</b></div>
 <p><a id="pageLink" href="#">Visit the chosen Page</a> </p>
 
