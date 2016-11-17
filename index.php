@@ -108,7 +108,7 @@
 <div id="status">
 </div>
   
- <button type="button" onClick="logout()">Logout!</button>
+ <button type="button" onclick="logout()">Logout!</button>
 
 </body>
 </html>
